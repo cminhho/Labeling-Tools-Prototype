@@ -1,0 +1,8 @@
+<div class="container-fluid">
+  <div class="jumbotron text-center">
+    <app-loader [isLoading]="isLoading"></app-loader>
+    <q [hidden]="isLoading">{{ qoute }}</q>
+  </div>
+  <button class="btn btn-primary" [routerLink]="['/templates/new']">NEW</button>
+</div>
+<bn-ng-pdf-viewer [showAll]="true" [PDF]="'http://www.africau.edu/images/default/sample.pdf'" [pageNo]="1" ></bn-ng-pdf-viewer>

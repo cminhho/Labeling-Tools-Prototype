@@ -1,0 +1,17 @@
+<!-- A first map -->
+<button class="btn btn-primary" (click)="draw('Point')">Point</button>
+<button class="btn btn-primary" (click)="draw('LineString')">LineString</button>
+<button class="btn btn-primary" (click)="draw('Polygon')">Polygon</button>
+<button class="btn btn-primary" (click)="draw('Circle')">Circle</button>
+<button class="btn btn-primary" (click)="clear()">Clear</button>
+
+<app-map lon="2.4246" lat="48.845" zoom="1" class="map">
+  <!-- Add PDF Image Layer -->
+  <app-image-layer [imageUri]="imageUri" opacity="4" visibility="true"></app-image-layer>
+  <!-- Add a layer OSM -->
+  <!-- <app-layer layer="image" opacity="4" visibility="true"></app-layer> -->
+  <!-- Add interaction -->
+  <app-interaction #interactionMap></app-interaction>
+  <!-- Add a control insde the map (boolmark) -->
+  <app-control></app-control>
+</app-map>
