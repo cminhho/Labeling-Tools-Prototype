@@ -3,7 +3,7 @@
     <div *ngIf="selectedOcrLabelingType === ocrLabelingCategory.originalWithOcr">
       <app-embeded-ocr-form-tools></app-embeded-ocr-form-tools>
     </div>
-    <div *ngIf="selectedOcrLabelingType !== ocrLabelingCategory.originalWithOcr">
+    <div *ngIf="selectedOcrLabelingType == ocrLabelingCategory.ocr">
       <app-common-map class="map" lon="2.4246" lat="48.845" zoom="5" class="map">
         <!-- Add PDF Image Layer -->
         <app-image-layer [imageUri]="imageUri" opacity="0.6" visibility="true"></app-image-layer>
@@ -13,6 +13,12 @@
         <app-interaction #interactionMap></app-interaction>
         <!-- Add a control insde the map (boolmark) -->
         <!-- <app-control></app-control> -->
+      </app-common-map>
+    </div>
+    <div *ngIf="selectedOcrLabelingType === ocrLabelingCategory.original">
+      <app-common-map class="map" lon="2.4246" lat="48.845" zoom="5" class="map" id="map1">
+        <!-- Add PDF Image Layer -->
+        <app-image-layer [imageUri]="imageUri" opacity="0.6" visibility="true"></app-image-layer>
       </app-common-map>
     </div>
   </div>
