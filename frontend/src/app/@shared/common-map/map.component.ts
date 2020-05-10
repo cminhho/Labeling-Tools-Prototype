@@ -35,6 +35,9 @@ export class MapComponent implements OnInit {
    */
   @Input() zoom: number;
 
+  @Input() width: string = '100%';
+  @Input() height: string = '100%';
+
   /**
    * [ol.Map](http://openlayers.org/en/latest/apidoc/ol.Map.html) Openlayer map object
    */

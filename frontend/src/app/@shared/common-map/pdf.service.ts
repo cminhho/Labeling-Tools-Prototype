@@ -1,10 +1,6 @@
 import { Injectable } from '@angular/core';
 import { constants } from './constant';
-import * as pdfjsLib from "pdfjs-dist";
-
-// The workerSrc property shall be specified.
-pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
-
+import * as pdfjsLib from 'pdfjs-dist';
 
 export interface ICanvasState {
   imageUri: string;
@@ -31,6 +27,14 @@ export class PdfService {
   state: ICanvasState;
 
   constructor() {
+    let pdfWorkerSrc: string;
+    if (window.hasOwnProperty('pdfWorkerSrc') && typeof (window as any).pdfWorkerSrc === 'string' && (window as any).pdfWorkerSrc) {
+      pdfWorkerSrc = (window as any).pdfWorkerSrc;
+    } else {
+      pdfWorkerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${(pdfjsLib as any).version}/pdf.worker.min.js`;
+    }
+    (pdfjsLib as any).GlobalWorkerOptions.workerSrc = pdfWorkerSrc;
+
     this.state = {
       imageUri: null,
       imageWidth: 1024,

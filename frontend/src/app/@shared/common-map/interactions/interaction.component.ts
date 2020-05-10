@@ -1,12 +1,12 @@
 import { Component, Input, OnInit, Host } from '@angular/core';
 
-import { MapService } from '../map.service';
-import { MapidService } from '../mapid.service';
 import Map from 'ol/Map';
 import { Draw, Modify, Snap } from 'ol/interaction';
 import { OSM, Vector as VectorSource } from 'ol/source';
 import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer';
 import { Circle as CircleStyle, Fill, Stroke, Style } from 'ol/style';
+import { MapService } from '../map.service';
+import { MapidService } from '../mapid.service';
 
 /**
  * Add interactions to a map
@@ -17,14 +17,14 @@ import { Circle as CircleStyle, Fill, Stroke, Style } from 'ol/style';
  */
 @Component({
   selector: 'app-interaction',
-  templateUrl: './interaction.component.html',
+  template: '',
 })
 export class InteractionComponent implements OnInit {
   map: Map;
 
   source: any;
   snap: any;
-  draw: any;
+  drawInteraction: any;
 
   /** draw type */
   @Input() type: any;
@@ -35,14 +35,14 @@ export class InteractionComponent implements OnInit {
     private mapService: MapService,
     @Host()
     private mapidService: MapidService
-  ) {}
+  ) { }
 
   /** Add new interaction to the map
    */
   ngOnInit() {
     this.source = new VectorSource();
     var typeSelect = document.getElementById('type');
-    var vector = new VectorLayer({
+    var drawVector = new VectorLayer({
       source: this.source,
       style: new Style({
         fill: new Fill({
@@ -66,27 +66,28 @@ export class InteractionComponent implements OnInit {
     // Get the second map to synchronize
     const mapId = this.mapidService.getId();
     const map2 = mapId === 'map1' ? 'map' : 'map1';
+    drawVector.setOpacity(1);
     // Add interaction
-    this.map.addLayer(vector);
+    this.map.addLayer(drawVector);
   }
 
   addInteractions(drawType: string) {
-    this.map.removeInteraction(this.draw);
+    this.map.removeInteraction(this.drawInteraction);
     this.map.removeInteraction(this.snap);
     this._addInteractions(drawType);
   }
 
   removeInteractions() {
-    this.map.removeInteraction(this.draw);
+    this.map.removeInteraction(this.drawInteraction);
     this.map.removeInteraction(this.snap);
   }
 
   private _addInteractions(drawType: any) {
-    this.draw = new Draw({
+    this.drawInteraction = new Draw({
       source: this.source,
       type: drawType,
     });
-    this.map.addInteraction(this.draw);
+    this.map.addInteraction(this.drawInteraction);
     this.snap = new Snap({ source: this.source });
     this.map.addInteraction(this.snap);
   }

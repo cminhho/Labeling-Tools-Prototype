@@ -1,19 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImageMapComponent } from './image-map.component';
+import { CommonMapComponent } from './common-map.component';
 
-describe('ImageMapComponent', () => {
-  let component: ImageMapComponent;
-  let fixture: ComponentFixture<ImageMapComponent>;
+describe('CommonMapComponent', () => {
+  let component: CommonMapComponent;
+  let fixture: ComponentFixture<CommonMapComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ImageMapComponent],
-    }).compileComponents();
+      declarations: [ CommonMapComponent ]
+    })
+    .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ImageMapComponent);
+    fixture = TestBed.createComponent(CommonMapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

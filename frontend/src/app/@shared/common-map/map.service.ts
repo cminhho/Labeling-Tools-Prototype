@@ -29,9 +29,9 @@ import { getCenter } from 'ol/extent';
   providedIn: 'root',
 })
 export class MapService {
-  imageWidth? = 1024;
+  imageWidth?= 1024;
 
-  imageHeight? = 968;
+  imageHeight?= 968;
 
   /**
    * List of Openlayer map objects [ol.Map](https://openlayers.org/en/latest/apidoc/module-ol_Map-Map.html)
@@ -52,13 +52,16 @@ export class MapService {
     const projection = this.createProjection(this.imageExtent);
     const minZoom = 1;
     const map = new Map({
+      // layers: [
+      //   new TileLayer({
+      //     source: new OSM()
+      //   })
+      // ],
       target: id,
       view: new View({
-        projection: projection,
-        center: getCenter(this.imageExtent),
-        zoom: minZoom,
-        maxZoom: 8,
-      }),
+        center: [0, 0],
+        zoom: 5
+      })
     });
     return map;
   }
