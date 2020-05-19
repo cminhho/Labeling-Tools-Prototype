@@ -5,44 +5,43 @@ using System.Threading.Tasks;
 using LayoutService.API.Infrastructure;
 using LayoutService.API.Model;
 
-namespace LayoutTemplate.API.Service
+namespace LayoutTemplate.API.Services.Implementation
 {
     public class TemplateService : ITemplateService
     {
-        private readonly TemplateContext _context;
+        private readonly AppDbContext _context;
         private readonly ITemplateRepository _templateRepository;
 
-        public TemplateService(TemplateContext context, ITemplateRepository templateRepositor)
+        public TemplateService(AppDbContext context, ITemplateRepository templateRepositor)
         {
             _context = context;
             _templateRepository = templateRepositor;
         }
-        public async Task CreateTemplate(TemplateDto templateDto)
+        public async Task<Template> CreateTemplate(Template template)
         {
-            var template = new Template();
-            template.Name = templateDto.name;
-
-            await _templateRepository.CreateTemplate(template);
+            //var template = new Template();
+            //template.Name = templateDto.name;
+            return await _templateRepository.CreateTemplate(template);
         }
 
-        public Task<Template> DelteTemplateByIdAsync(Guid templateId)
+        public async Task<Template> DelteTemplateByIdAsync(Guid templateId)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<List<Template>> GetAllTemplates()
+        public async Task<IEnumerable<Template>> GetAllTemplates()
         {
             return await _templateRepository.GetAllAsync();
         }
 
         public async Task<Template> GetTemplateByIdAsync(Guid templateId)
-        { 
+        {
             return await _templateRepository.GetTemplateByIdAsync(templateId);
         }
 
-        public Task<Template> UpdateTemplate(TemplateDto userDto)
+        public async Task<Template> UpdateTemplate(Template templateChanges)
         {
-            throw new NotImplementedException();
+            return await _templateRepository.UpdateTemplate(templateChanges);
         }
     }
 }

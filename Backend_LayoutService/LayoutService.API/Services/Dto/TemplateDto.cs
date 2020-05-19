@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace LayoutTemplate.API.Service
+namespace LayoutTemplate.API.Services.Dto
 {
     public class TemplateDto
     { 

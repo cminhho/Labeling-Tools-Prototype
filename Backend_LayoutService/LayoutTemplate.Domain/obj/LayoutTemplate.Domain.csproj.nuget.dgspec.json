@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\TecAlliance\\experimental\\Labeling-Tools-Prototype\\backend\\Backend_LayoutService\\LayoutTemplate.Domain\\LayoutTemplate.Domain.csproj": {}
+    "D:\\Projects\\TecAlliance\\experimental\\Labeling-Tools-Prototype\\Backend_LayoutService\\LayoutTemplate.Domain\\LayoutTemplate.Domain.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\TecAlliance\\experimental\\Labeling-Tools-Prototype\\backend\\Backend_LayoutService\\LayoutTemplate.Domain\\LayoutTemplate.Domain.csproj": {
+    "D:\\Projects\\TecAlliance\\experimental\\Labeling-Tools-Prototype\\Backend_LayoutService\\LayoutTemplate.Domain\\LayoutTemplate.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\TecAlliance\\experimental\\Labeling-Tools-Prototype\\backend\\Backend_LayoutService\\LayoutTemplate.Domain\\LayoutTemplate.Domain.csproj",
+        "projectUniqueName": "D:\\Projects\\TecAlliance\\experimental\\Labeling-Tools-Prototype\\Backend_LayoutService\\LayoutTemplate.Domain\\LayoutTemplate.Domain.csproj",
         "projectName": "LayoutTemplate.Domain",
-        "projectPath": "D:\\Projects\\TecAlliance\\experimental\\Labeling-Tools-Prototype\\backend\\Backend_LayoutService\\LayoutTemplate.Domain\\LayoutTemplate.Domain.csproj",
+        "projectPath": "D:\\Projects\\TecAlliance\\experimental\\Labeling-Tools-Prototype\\Backend_LayoutService\\LayoutTemplate.Domain\\LayoutTemplate.Domain.csproj",
         "packagesPath": "C:\\Users\\hmchung.TMA\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\TecAlliance\\experimental\\Labeling-Tools-Prototype\\backend\\Backend_LayoutService\\LayoutTemplate.Domain\\obj\\",
+        "outputPath": "D:\\Projects\\TecAlliance\\experimental\\Labeling-Tools-Prototype\\Backend_LayoutService\\LayoutTemplate.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LayoutService.API.Infrastructure
 {
-    public class TemplateContext : DbContext
+    public class AppDbContext : DbContext
     {
-        public TemplateContext(DbContextOptions<TemplateContext> options)
+        public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {
         }

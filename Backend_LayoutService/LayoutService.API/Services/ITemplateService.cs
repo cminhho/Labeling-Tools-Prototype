@@ -1,15 +1,20 @@
-﻿using System;
+﻿using LayoutService.API.Model;
+using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace LayoutService.API.Model
+
+namespace LayoutTemplate.API.Services
 {
-    public interface ITemplateRepository
+    public interface ITemplateService
     {
-        Task CreateTemplate(Template template);
+        Task<Template> CreateTemplate(Template templateDto);
         Task<Template> UpdateTemplate(Template userDto);
-        Task<List<Template>> GetAllAsync();
+
+        Task<IEnumerable<Template>> GetAllTemplates();
         Task<Template> GetTemplateByIdAsync(Guid templateId);
         Task<Template> DelteTemplateByIdAsync(Guid templateId);
+
     }
 }
