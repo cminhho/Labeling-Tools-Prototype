@@ -24,9 +24,9 @@ namespace LayoutTemplate.API.Services.Implementation
             return await _templateRepository.CreateTemplate(template);
         }
 
-        public async Task<Template> DelteTemplateByIdAsync(Guid templateId)
+        public async Task<Template> DeleteTemplateByIdAsync(Guid templateId)
         {
-            throw new NotImplementedException();
+            return await _templateRepository.DeleteTemplateByIdAsync(templateId);
         }
 
         public async Task<IEnumerable<Template>> GetAllTemplates()

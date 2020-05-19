@@ -11,6 +11,6 @@ namespace LayoutService.API.Respotiroties
         Task<Template> UpdateTemplate(Template template);
         Task<IEnumerable<Template>> GetAllAsync();
         Task<Template> GetTemplateByIdAsync(Guid templateId);
-        void DeleteTemplateByIdAsync(Guid templateId);
+        Task<Template> DeleteTemplateByIdAsync(Guid templateId);
     }
 }

@@ -22,13 +22,14 @@ namespace LayoutService.API.Respotiroties.Implementation
             return template;
         }
 
-        public void DeleteTemplateByIdAsync(Guid templateId)
+        public async Task<Template> DeleteTemplateByIdAsync(Guid templateId)
         {
             Template template = this._context.Templates.Find(templateId);
             if (template != null) 
             {
                 this._context.Templates.Remove(template);
             }
+            return template;
         }
 
         public async Task<IEnumerable<Template>> GetAllAsync()

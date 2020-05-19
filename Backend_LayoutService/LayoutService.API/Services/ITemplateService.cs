@@ -14,7 +14,7 @@ namespace LayoutTemplate.API.Services
 
         Task<IEnumerable<Template>> GetAllTemplates();
         Task<Template> GetTemplateByIdAsync(Guid templateId);
-        Task<Template> DelteTemplateByIdAsync(Guid templateId);
+        Task<Template> DeleteTemplateByIdAsync(Guid templateId);
 
     }
 }

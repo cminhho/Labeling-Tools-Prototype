@@ -58,7 +58,7 @@ namespace LayoutService.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Template>> deletetemplate(Guid id)
         {
-            return await _templateService.DelteTemplateByIdAsync(id);
+            return await _templateService.DeleteTemplateByIdAsync(id);
         }
     }
 }
