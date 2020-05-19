@@ -32,9 +32,5 @@
 	<ProjectReference Include="..\LayoutTemplate.Infrastructure\LayoutTemplate.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Templates\" />
-  </ItemGroup>
-
 
 </Project>
