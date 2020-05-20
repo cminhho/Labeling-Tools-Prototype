@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using AutoMapper;
 using LayoutService.API.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using LayoutTemplate.API.Services;
 using LayoutService.API.Respotiroties;
 using LayoutService.API.Respotiroties.Implementation;
 using LayoutTemplate.API.Services.Implementation;
+using LayoutTemplateType.API.Services.Implementation;
 
 namespace LayoutService
 {
@@ -25,15 +25,16 @@ namespace LayoutService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("TemplateList"));
+            services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("PDFInboundAutomation"));
             services.AddScoped<ITemplateService, TemplateService>();
+            services.AddScoped<ITemplateTypeService, TemplateTypeService>();
             services.AddScoped<ITemplateRepository, TemplateRepository>();
+            services.AddScoped<ITemplateTypeRepository, TemplateTypeRepository>();
             services.AddControllers();
             services.AddHttpContextAccessor();
             //var serviceProvider = services.BuildServiceProvider();
 
             //IExecutionContextAccessor executionContextAccessor = new ExecutionContextAccessor(serviceProvider.GetService<IHttpContextAccessor>());
-
 
         }
 

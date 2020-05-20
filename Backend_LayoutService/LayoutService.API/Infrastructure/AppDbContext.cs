@@ -11,5 +11,7 @@ namespace LayoutService.API.Infrastructure
         }
 
         public DbSet<Template> Templates { get; set; }
+
+        public DbSet<TemplateType> TemplateTypes { get; set; }
     }
 }
