@@ -24,7 +24,11 @@ namespace LayoutService.Domain.Templates
         [Column("model_id")]
         public string ModelId { get; set; }
 
+        public virtual TemplateType templateType { get; set; }
+
         public string CreatedBy { get; set; }
+
+        [DataType(DataType.Date)]
         public DateTime CreatedDate { get; set; }
         public string LastModifiedBy { get; set; }
         public DateTime LastModifiedDate { get; set; }

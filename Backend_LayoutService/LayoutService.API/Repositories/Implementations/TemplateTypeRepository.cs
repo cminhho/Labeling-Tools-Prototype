@@ -15,19 +15,19 @@ namespace LayoutService.API.Respotiroties.Implementation
         {
             _context = context;
         }
-        public async Task<TemplateType> CreateTemplateType(TemplateType TemplateType)
+        public async Task<TemplateType> CreateTemplateTypeAsync(TemplateType TemplateType)
         {
-            this._context.TemplateTypes.Add(TemplateType);
-            this._context.SaveChanges();
+            await _context.TemplateTypes.AddAsync(TemplateType);
+            await _context.SaveChangesAsync();
             return TemplateType;
         }
 
         public async Task<TemplateType> DeleteTemplateTypeByIdAsync(Guid TemplateTypeId)
         {
-            TemplateType TemplateType = this._context.TemplateTypes.Find(TemplateTypeId);
+            TemplateType TemplateType = await _context.TemplateTypes.FindAsync(TemplateTypeId);
             if (TemplateType != null)
             {
-                this._context.TemplateTypes.Remove(TemplateType);
+                _context.TemplateTypes.Remove(TemplateType);
             }
             return TemplateType;
         }
@@ -39,14 +39,14 @@ namespace LayoutService.API.Respotiroties.Implementation
 
         public async Task<TemplateType> GetTemplateTypeByIdAsync(Guid TemplateTypeId)
         {
-            return this._context.TemplateTypes.Find(TemplateTypeId);
+            return await _context.TemplateTypes.FindAsync(TemplateTypeId);
         }
 
-        public async Task<TemplateType> UpdateTemplateType(TemplateType employeeChanges)
+        public async Task<TemplateType> UpdateTemplateTypeAsync(TemplateType employeeChanges)
         {
-            var employee = this._context.TemplateTypes.Attach(employeeChanges);
+            var employee = _context.TemplateTypes.Attach(employeeChanges);
             employee.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            this._context.SaveChanges();
+            await _context.SaveChangesAsync();
             return employeeChanges;
         }
     }

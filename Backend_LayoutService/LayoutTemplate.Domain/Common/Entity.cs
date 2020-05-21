@@ -5,13 +5,13 @@ namespace LayoutTemplate.Domain.Common
 {
     public abstract class Entity
     {
-        public long Id { get; set; }
+        public Guid Id { get; set; }
 
         protected Entity()
         {
         }
 
-        protected Entity(long id)
+        protected Entity(Guid id)
         {
             this.Id = id;
         }

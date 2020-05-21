@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using LayoutService.API.Model;
 using LayoutTemplate.API.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 
 namespace LayoutService.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api")]
     [ApiController]
     public class TemplatesController : ControllerBase
     {
@@ -23,15 +20,15 @@ namespace LayoutService.Controllers
         }
 
         // GET: api/Templates
-        [HttpGet]
+        [HttpGet("templates")]
         public async Task<IEnumerable<Template>> GetTemplateItems()
         {
-            return await _templateService.GetAllTemplates();
+            return await _templateService.GetAllTemplatesAsync();
         }
 
         // GET: api/Templates/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Template>> GetTemplate(Guid id)
+        [HttpGet("templates/{id}")]
+        public async Task<ActionResult<Template>> GetTemplateAsync(Guid id)
         {
             return await _templateService.GetTemplateByIdAsync(id);
         }
@@ -39,24 +36,24 @@ namespace LayoutService.Controllers
         // put: api/templates/5
         // to protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost("{id}")]
-        public async Task<ActionResult<Template>> PutTemplate(long id, Template template)
+        [HttpPut("templates/{id}")]
+        public async Task<ActionResult<Template>> PutTemplateAsync(long id, Template template)
         {
-            return await _templateService.UpdateTemplate(template);
+            return await _templateService.UpdateTemplateAsync(template);
         }
 
         // POST: api/Templates
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost]
-        public async Task<ActionResult<Template>> PostTemplate(Template template)
+        [HttpPost("templates")]
+        public async Task<ActionResult<Template>> PostTemplateAsync(Template template)
         {
-            return await _templateService.CreateTemplate(template);
+            return await _templateService.CreateTemplateAsync(template);
         }
 
         // delete: api/templates/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Template>> deletetemplate(Guid id)
+        [HttpDelete("templates/{id}")]
+        public async Task<ActionResult<Template>> DeleteTemplateAsync(Guid id)
         {
             return await _templateService.DeleteTemplateByIdAsync(id);
         }

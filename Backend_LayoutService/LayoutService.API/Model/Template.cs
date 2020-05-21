@@ -27,6 +27,8 @@ namespace LayoutService.API.Model
         public virtual TemplateType templateType { get; set; }
 
         public string CreatedBy { get; set; }
+
+        [DataType(DataType.Date)]
         public DateTime CreatedDate { get; set; }
         public string LastModifiedBy { get; set; }
         public DateTime LastModifiedDate { get; set; }

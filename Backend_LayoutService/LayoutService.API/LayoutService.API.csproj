@@ -17,6 +17,9 @@
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.4" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.4" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
+
+		<PackageReference Include="Microsoft.Azure.CognitiveServices.FormRecognizer" Version="0.8.0-preview" />
+		<PackageReference Include="Azure.Storage.Blobs" Version="12.4.2" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -24,6 +27,10 @@
 		<ProjectReference Include="..\LayoutTemplate.Domain\LayoutTemplate.Domain.csproj" />
 		<ProjectReference Include="..\LayoutTemplate.Application\LayoutTemplate.Application.csproj" />
 		<ProjectReference Include="..\LayoutTemplate.Infrastructure\LayoutTemplate.Infrastructure.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Web\Problems\" />
 	</ItemGroup>
 
 

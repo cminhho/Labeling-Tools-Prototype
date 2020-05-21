@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using LayoutService.API.Model;
 using LayoutTemplate.API.Services;
-using LayoutTemplateType.API.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 
 namespace LayoutService.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api")]
     [ApiController]
     public class TemplateTypesController : ControllerBase
     {
@@ -24,15 +20,15 @@ namespace LayoutService.Controllers
         }
 
         // GET: api/TemplateTypes
-        [HttpGet]
-        public async Task<IEnumerable<TemplateType>> GetTemplateTypeItems()
+        [HttpGet("templatetype")]
+        public async Task<IEnumerable<TemplateType>> GetTemplateTypeItemsAsync()
         {
-            return await _templateTypeService.GetAllTemplateTypes();
+            return await _templateTypeService.GetAllTemplateTypesAsync();
         }
 
         // GET: api/TemplateTypes/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<TemplateType>> GetTemplateType(Guid id)
+        [HttpGet("templatetype/{id}")]
+        public async Task<ActionResult<TemplateType>> GetTemplateTypeAsync(Guid id)
         {
             return await _templateTypeService.GetTemplateTypeByIdAsync(id);
         }
@@ -40,24 +36,24 @@ namespace LayoutService.Controllers
         // put: api/TemplateTypes/5
         // to protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost("{id}")]
-        public async Task<ActionResult<TemplateType>> PutTemplateType(long id, TemplateType TemplateType)
+        [HttpPut("templatetype/{id}")]
+        public async Task<ActionResult<TemplateType>> PutTemplateTypeAsync(long id, TemplateType TemplateType)
         {
-            return await _templateTypeService.UpdateTemplateType(TemplateType);
+            return await _templateTypeService.UpdateTemplateTypeAsync(TemplateType);
         }
 
         // POST: api/TemplateTypes
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost]
-        public async Task<ActionResult<TemplateType>> PostTemplateType(TemplateType TemplateType)
+        [HttpPost("templatetype")]
+        public async Task<ActionResult<TemplateType>> PostTemplateTypeAsync(TemplateType TemplateType)
         {
-            return await _templateTypeService.CreateTemplateType(TemplateType);
+            return await _templateTypeService.CreateTemplateTypeAsync(TemplateType);
         }
 
         // delete: api/TemplateTypes/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<TemplateType>> deleteTemplateType(Guid id)
+        [HttpDelete("templatetype/{id}")]
+        public async Task<ActionResult<TemplateType>> DeleteTemplateTypeAsync(Guid id)
         {
             return await _templateTypeService.DeleteTemplateTypeByIdAsync(id);
         }

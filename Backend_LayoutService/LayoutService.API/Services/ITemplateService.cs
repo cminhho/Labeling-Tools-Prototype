@@ -9,10 +9,10 @@ namespace LayoutTemplate.API.Services
 {
     public interface ITemplateService
     {
-        Task<Template> CreateTemplate(Template templateDto);
-        Task<Template> UpdateTemplate(Template userDto);
+        Task<Template> CreateTemplateAsync(Template templateDto);
+        Task<Template> UpdateTemplateAsync(Template userDto);
 
-        Task<IEnumerable<Template>> GetAllTemplates();
+        Task<IEnumerable<Template>> GetAllTemplatesAsync();
         Task<Template> GetTemplateByIdAsync(Guid templateId);
         Task<Template> DeleteTemplateByIdAsync(Guid templateId);
 

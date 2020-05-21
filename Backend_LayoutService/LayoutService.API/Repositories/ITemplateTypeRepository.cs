@@ -7,8 +7,8 @@ namespace LayoutService.API.Respotiroties
 {
     public interface ITemplateTypeRepository
     {
-        Task<TemplateType> CreateTemplateType(TemplateType TemplateType);
-        Task<TemplateType> UpdateTemplateType(TemplateType TemplateType);
+        Task<TemplateType> CreateTemplateTypeAsync(TemplateType TemplateType);
+        Task<TemplateType> UpdateTemplateTypeAsync(TemplateType TemplateType);
         Task<IEnumerable<TemplateType>> GetAllAsync();
         Task<TemplateType> GetTemplateTypeByIdAsync(Guid TemplateTypeId);
         Task<TemplateType> DeleteTemplateTypeByIdAsync(Guid TemplateTypeId);

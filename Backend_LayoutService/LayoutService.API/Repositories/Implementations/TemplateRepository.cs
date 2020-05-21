@@ -1,5 +1,6 @@
 ﻿using LayoutService.API.Infrastructure;
 using LayoutService.API.Model;
+using LayoutService.API.Repositories.Common;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LayoutService.API.Respotiroties.Implementation
 {
-    public class TemplateRepository : ITemplateRepository
+    public class TemplateRepository : Repository<Template>, ITemplateRepository
     {
         private readonly AppDbContext _context;
 
@@ -15,19 +16,20 @@ namespace LayoutService.API.Respotiroties.Implementation
         {
             _context = context;
         }
-        public async Task<Template> CreateTemplate(Template template)
+        public async Task<Template> CreateTemplateAsync(Template template)
         {
-            this._context.Templates.Add(template);
-            this._context.SaveChanges();
+            await _context.Templates.AddAsync(template);
+            await _context.SaveChangesAsync();
             return template;
         }
 
         public async Task<Template> DeleteTemplateByIdAsync(Guid templateId)
         {
-            Template template = this._context.Templates.Find(templateId);
+            Template template = await _context.Templates.FindAsync(templateId);
             if (template != null) 
             {
-                this._context.Templates.Remove(template);
+                _context.Templates.Remove(template);
+                await _context.SaveChangesAsync();
             }
             return template;
         }
@@ -39,14 +41,14 @@ namespace LayoutService.API.Respotiroties.Implementation
 
         public async Task<Template> GetTemplateByIdAsync(Guid templateId)
         {
-            return this._context.Templates.Find(templateId);
+            return await _context.Templates.FindAsync(templateId);
         }
 
-        public async Task<Template> UpdateTemplate(Template employeeChanges)
+        public async Task<Template> UpdateTemplateAsync(Template employeeChanges)
         {
             var employee = this._context.Templates.Attach(employeeChanges);
             employee.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            this._context.SaveChanges();
+            await _context.SaveChangesAsync();
             return employeeChanges;
         }
     }

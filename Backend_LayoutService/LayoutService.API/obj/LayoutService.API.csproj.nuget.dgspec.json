@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.4.2, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.4, )"
@@ -63,6 +67,10 @@
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "Microsoft.Azure.CognitiveServices.FormRecognizer": {
+              "target": "Package",
+              "version": "[0.8.0-preview, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
