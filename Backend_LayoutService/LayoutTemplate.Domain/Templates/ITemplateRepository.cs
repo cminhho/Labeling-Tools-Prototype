@@ -1,16 +1,17 @@
 ﻿using LayoutService.Domain.Templates;
+using LayoutTemplate.Domain.Common;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace LayoutTemplate.Domain.Templates
 {
-    public interface ITemplateRepository
+    public interface ITemplateRepository : IRepository<Template>
     {
-        Task CreateTemplate(Template template);
-        Task<Template> UpdateTemplate(Template userDto);
-        Task<List<Template>> GetAllAsync();
+        Task<Template> CreateTemplateAsync(Template template);
+        Task<Template> UpdateTemplateAsync(Template template);
+        Task<IEnumerable<Template>> GetAllAsync();
         Task<Template> GetTemplateByIdAsync(Guid templateId);
-        Task<Template> DelteTemplateByIdAsync(Guid templateId);
+        Task<Template> DeleteTemplateByIdAsync(Guid templateId);
     }
 }

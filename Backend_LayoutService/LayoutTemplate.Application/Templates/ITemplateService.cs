@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using LayoutService.Domain.Templates;
 using System.Threading.Tasks;
 
@@ -9,11 +8,12 @@ namespace LayoutTemplate.Application.Templates
 {
     public interface ITemplateService
     {
-        Task CreateTemplate(TemplateDto templateDto);
-        //Task<Template> UpdateTemplate(TemplateDto userDto);
-        Task<List<Template>> GetAllTemplates();
-        //Task<Template> GetTemplateByIdAsync(Guid templateId);
-        //Task<Template> DelteTemplateByIdAsync(Guid templateId);
+        Task<Template> CreateTemplateAsync(Template templateDto);
+        Task<Template> UpdateTemplateAsync(Template userDto);
+
+        Task<IEnumerable<Template>> GetAllTemplatesAsync();
+        Task<Template> GetTemplateByIdAsync(Guid templateId);
+        Task<Template> DeleteTemplateByIdAsync(Guid templateId);
 
     }
 }

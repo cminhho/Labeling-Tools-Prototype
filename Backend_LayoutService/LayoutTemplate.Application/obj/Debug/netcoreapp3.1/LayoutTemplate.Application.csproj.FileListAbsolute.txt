@@ -166,3 +166,10 @@ D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutServ
 D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutTemplate.Application\obj\Debug\netcoreapp3.1\LayoutTemplate.Application.dll
 D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutTemplate.Application\obj\Debug\netcoreapp3.1\LayoutTemplate.Application.pdb
 D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutTemplate.Application\obj\Debug\netcoreapp3.1\LayoutTemplate.Application.genruntimeconfig.cache
+D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutTemplate.Application\bin\Debug\netcoreapp3.1\Azure.Core.dll
+D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutTemplate.Application\bin\Debug\netcoreapp3.1\Azure.Storage.Blobs.dll
+D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutTemplate.Application\bin\Debug\netcoreapp3.1\Azure.Storage.Common.dll
+D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutTemplate.Application\bin\Debug\netcoreapp3.1\Microsoft.Azure.CognitiveServices.FormRecognizer.dll
+D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutTemplate.Application\bin\Debug\netcoreapp3.1\Microsoft.Rest.ClientRuntime.dll
+D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutTemplate.Application\bin\Debug\netcoreapp3.1\Microsoft.Rest.ClientRuntime.Azure.dll
+D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutTemplate.Application\bin\Debug\netcoreapp3.1\System.Text.Json.dll

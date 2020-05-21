@@ -1,4 +1,5 @@
 ﻿using LayoutTemplate.Domain.Common;
+using LayoutTemplate.Domain.TemplateTypes;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -32,7 +33,5 @@ namespace LayoutService.Domain.Templates
         public DateTime CreatedDate { get; set; }
         public string LastModifiedBy { get; set; }
         public DateTime LastModifiedDate { get; set; }
-
-
     }
 }

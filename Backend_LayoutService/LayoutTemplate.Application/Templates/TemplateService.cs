@@ -1,50 +1,42 @@
 ﻿using LayoutService.Domain.Templates;
+using LayoutTemplate.Infrastructure.Domain;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
-using LayoutService.Infrastructure.Database;
-using Microsoft.EntityFrameworkCore;
-using LayoutTemplate.Domain.Templates;
 
 namespace LayoutTemplate.Application.Templates
 {
     public class TemplateService : ITemplateService
     {
-        private readonly TemplateContext _context;
-        private readonly ITemplateRepository _templateRepository;
+        private UnitOfWork _context;
 
-        public TemplateService(TemplateContext context, ITemplateRepository templateRepositor)
+        public TemplateService(UnitOfWork _context)
         {
-            _context = context;
-            _templateRepository = templateRepositor;
+            this._context = _context;
         }
-        public async Task CreateTemplate(TemplateDto templateDto)
+        public async Task<Template> CreateTemplateAsync(Template template)
         {
-            var template = new Template();
-            template.Name = templateDto.name;
-
-            await _templateRepository.CreateTemplate(template);
+            return await _context.TemplateRepository.CreateTemplateAsync(template);
         }
 
-        public Task<Template> DelteTemplateByIdAsync(Guid templateId)
+        public async Task<Template> DeleteTemplateByIdAsync(Guid templateId)
         {
-            throw new NotImplementedException();
+            return await _context.TemplateRepository.DeleteTemplateByIdAsync(templateId);
         }
 
-        public async Task<List<Template>> GetAllTemplates()
+        public async Task<IEnumerable<Template>> GetAllTemplatesAsync()
         {
-            return await _templateRepository.GetAllAsync();
+            return await _context.TemplateRepository.GetAllAsync();
         }
 
         public async Task<Template> GetTemplateByIdAsync(Guid templateId)
-        { 
-            return await _templateRepository.GetTemplateByIdAsync(templateId);
+        {
+            return await _context.TemplateRepository.GetTemplateByIdAsync(templateId);
         }
 
-        public Task<Template> UpdateTemplate(TemplateDto userDto)
+        public async Task<Template> UpdateTemplateAsync(Template templateChanges)
         {
-            throw new NotImplementedException();
+            return await _context.TemplateRepository.UpdateTemplateAsync(templateChanges);
         }
     }
 }

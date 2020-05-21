@@ -25,16 +25,10 @@
       "LayoutService.API/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
-          "Azure.Storage.Blobs": "12.4.2",
           "LayoutTemplate.Application": "1.0.0",
           "LayoutTemplate.Domain": "1.0.0",
           "LayoutTemplate.Infrastructure": "1.0.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.4",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.1",
-          "Microsoft.Azure.CognitiveServices.FormRecognizer": "0.8.0-preview",
-          "Microsoft.EntityFrameworkCore": "3.1.4",
-          "Microsoft.EntityFrameworkCore.InMemory": "3.1.4",
-          "Microsoft.EntityFrameworkCore.Sqlite": "3.1.4",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.4",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.2",
           "Swashbuckle.AspNetCore": "5.4.1",
@@ -2622,9 +2616,10 @@
       },
       "LayoutTemplate.Application/1.0.0": {
         "dependencies": {
+          "Azure.Storage.Blobs": "12.4.2",
           "LayoutTemplate.Domain": "1.0.0",
           "LayoutTemplate.Infrastructure": "1.0.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.4"
+          "Microsoft.Azure.CognitiveServices.FormRecognizer": "0.8.0-preview"
         },
         "runtime": {
           "LayoutTemplate.Application.dll": {}
@@ -2635,10 +2630,7 @@
       },
       "LayoutTemplate.Domain/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.4",
-          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.1",
-          "Microsoft.EntityFrameworkCore": "3.1.4",
-          "Microsoft.EntityFrameworkCore.Sqlite": "3.1.4"
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.1"
         },
         "runtime": {
           "LayoutTemplate.Domain.dll": {}
@@ -2650,9 +2642,11 @@
       "LayoutTemplate.Infrastructure/1.0.0": {
         "dependencies": {
           "LayoutTemplate.Domain": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.4",
           "Microsoft.EntityFrameworkCore": "3.1.4",
           "Microsoft.EntityFrameworkCore.InMemory": "3.1.4",
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.4"
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.4",
+          "Microsoft.EntityFrameworkCore.Sqlite": "3.1.4"
         },
         "runtime": {
           "LayoutTemplate.Infrastructure.dll": {}

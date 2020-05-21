@@ -5,14 +5,17 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using LayoutService.API.Infrastructure;
-using LayoutTemplate.API.Services;
-using LayoutService.API.Respotiroties;
-using LayoutService.API.Respotiroties.Implementation;
-using LayoutTemplate.API.Services.Implementation;
-using LayoutService.API.Services.Implementation;
-using LayoutTemplateType.API.Services.Implementation;
+using LayoutService.Infrastructure.Database;
 using LayoutService.API.Configuration;
+using LayoutTemplate.Domain.Templates;
+using LayoutTemplate.Domain.TemplateTypes;
+using LayoutTemplate.Infrastructure.Domain.Templates;
+using LayoutTemplate.Infrastructure.Domain.TemplateTypes;
+using LayoutTemplate.Infrastructure.Domain;
+using LayoutTemplate.Application.Templates;
+using LayoutTemplate.Application.TemplateTypes;
+using LayoutTemplate.Application.FormRecognizer;
+using LayoutTemplate.Application.BlobStorage;
 
 namespace LayoutService
 {

@@ -235,3 +235,4 @@ D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutServ
 D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutTemplate.Infrastructure\obj\Debug\netcoreapp3.1\LayoutTemplate.Infrastructure.dll
 D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutTemplate.Infrastructure\obj\Debug\netcoreapp3.1\LayoutTemplate.Infrastructure.pdb
 D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutTemplate.Infrastructure\obj\Debug\netcoreapp3.1\LayoutTemplate.Infrastructure.genruntimeconfig.cache
+D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutTemplate.Infrastructure\bin\Debug\netcoreapp3.1\System.Text.Json.dll
