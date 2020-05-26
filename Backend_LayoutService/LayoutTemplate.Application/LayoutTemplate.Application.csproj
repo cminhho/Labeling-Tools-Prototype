@@ -8,10 +8,16 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Azure.CognitiveServices.FormRecognizer" Version="0.8.0-preview" />
 		<PackageReference Include="Azure.Storage.Blobs" Version="12.4.2" />
+		<PackageReference Include="Azure.AI.FormRecognizer" Version="1.0.0-preview.2" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\LayoutTemplate.Domain\LayoutTemplate.Domain.csproj" />
 		<ProjectReference Include="..\LayoutTemplate.Infrastructure\LayoutTemplate.Infrastructure.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Helpers\" />
+	  <Folder Include="Interfaces\" />
 	</ItemGroup>
 </Project>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using LayoutService.API.Common;
 using LayoutTemplate.Application.TemplateTypes;
 using LayoutTemplate.Domain.TemplateTypes;
 using Microsoft.AspNetCore.Mvc;
@@ -18,43 +19,51 @@ namespace LayoutService.API.TemplateTypes
             _templateTypeService = TemplateTypeService;
         }
 
-        // GET: api/TemplateTypes
+        /// <summary>
+        /// Gets all items.
+        /// </summary>
         [HttpGet("templatetype")]
         public async Task<IEnumerable<TemplateType>> GetTemplateTypeItemsAsync()
         {
             return await _templateTypeService.GetAllTemplateTypesAsync();
         }
 
-        // GET: api/TemplateTypes/5
+        /// <summary>
+        /// Gets a specific item.
+        /// </summary>
         [HttpGet("templatetype/{id}")]
         public async Task<ActionResult<TemplateType>> GetTemplateTypeAsync(Guid id)
         {
-            return await _templateTypeService.GetTemplateTypeByIdAsync(id);
+            var templateType = await _templateTypeService.GetTemplateTypeByIdAsync(id);
+            return ActionResultUtil.WrapOrNotFound(templateType);
         }
 
-        // put: api/TemplateTypes/5
-        // to protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        /// <summary>
+        /// Updates a specific item.
+        /// </summary>
         [HttpPut("templatetype/{id}")]
         public async Task<ActionResult<TemplateType>> PutTemplateTypeAsync(long id, TemplateType TemplateType)
         {
             return await _templateTypeService.UpdateTemplateTypeAsync(TemplateType);
         }
 
-        // POST: api/TemplateTypes
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        /// <summary>
+        /// Creates a specific item.
+        /// </summary>
         [HttpPost("templatetype")]
         public async Task<ActionResult<TemplateType>> PostTemplateTypeAsync(TemplateType TemplateType)
         {
             return await _templateTypeService.CreateTemplateTypeAsync(TemplateType);
         }
 
-        // delete: api/TemplateTypes/5
+        /// <summary>
+        /// Deletes a specific item.
+        /// </summary>
         [HttpDelete("templatetype/{id}")]
         public async Task<ActionResult<TemplateType>> DeleteTemplateTypeAsync(Guid id)
         {
-            return await _templateTypeService.DeleteTemplateTypeByIdAsync(id);
+            await _templateTypeService.DeleteTemplateTypeAsync(id);
+            return Ok();
         }
     }
 }

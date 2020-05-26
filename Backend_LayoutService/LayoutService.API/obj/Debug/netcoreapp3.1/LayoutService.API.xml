@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LayoutService.API</name>
+    </assembly>
+    <members>
+        <member name="M:LayoutService.Controllers.BlobStorageController.CreateBlobContainer(System.String)">
+            <summary>
+                Creates a new container 
+            </summary>
+        </member>
+        <member name="M:LayoutService.Controllers.BlobStorageController.UploadAsync(System.String,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+                Creates a new block, page, or append blob, or updates the content of an existing block blob.
+            </summary>
+        </member>
+        <member name="M:LayoutService.Controllers.BlobStorageController.GetBlobsAsync(System.String)">
+            <summary>
+            	Lists all of the blobs in a container.
+            </summary>
+        </member>
+        <member name="M:LayoutService.Controllers.BlobStorageController.DeleteBlobAsync(System.String,System.String)">
+            <summary>
+                Deletes a specific blob in a container.
+            </summary>
+        </member>
+        <member name="M:LayoutService.Controllers.FormRecognizer.TrainModelAsync(System.String)">
+            <summary>
+            Trains Custom Model.
+            </summary>
+            <param name="trainingDataUrl"></param>
+        </member>
+        <member name="M:LayoutService.Controllers.FormRecognizer.GetListOfExtractedKeys(System.Guid)">
+            <summary>
+            Gets list of extracted keys for training data
+            </summary>
+        </member>
+        <member name="M:LayoutService.Controllers.FormRecognizer.GetListOfModels">
+            <summary>
+            Gets all Custom Models.
+            </summary>
+        </member>
+        <member name="M:LayoutService.Controllers.FormRecognizer.GetListOfModels(System.Guid)">
+            <summary>
+            Gets analyze form result
+            </summary>
+        </member>
+        <member name="M:LayoutService.Controllers.FormRecognizerV2.TrainCustomModelAsync(System.String)">
+            <summary>
+                Trains Custom Model async.
+            </summary>
+            <param name="trainingDataUrl"></param>
+        </member>
+        <member name="M:LayoutService.Controllers.FormRecognizerV2.GetListOfModels">
+            <summary>
+                Get all Custom Models.
+            </summary>
+        </member>
+        <member name="M:LayoutService.Controllers.FormRecognizerV2.GetModel(System.String)">
+            <summary>
+                Get a Custom Models.
+            </summary>
+        </member>
+        <member name="M:LayoutService.API.Templates.TemplatesController.PostTemplateAsync(LayoutService.Domain.Templates.Template)">
+            <summary>
+            Creates an item.
+            </summary>
+            <param name="template">
+                The template.
+            </param>
+            <returns>
+                An asynchronous result that yields the create.
+            </returns>   
+        </member>
+        <member name="M:LayoutService.API.Templates.TemplatesController.GetTemplateItems">
+            <summary>
+            Gets all items
+            </summary>
+        </member>
+        <member name="M:LayoutService.API.Templates.TemplatesController.GetTemplateAsync(System.Guid)">
+            <summary>
+            Gets a specific item by unique id
+            </summary>
+        </member>
+        <member name="M:LayoutService.API.Templates.TemplatesController.PutTemplateAsync(System.Guid,LayoutService.Domain.Templates.Template)">
+            <summary>
+            Updates a specific item.
+            </summary>
+        </member>
+        <member name="M:LayoutService.API.Templates.TemplatesController.DeleteTemplateAsync(System.Guid)">
+            <summary>
+            Deletes a specific item.
+            </summary>
+        </member>
+        <member name="M:LayoutService.API.TemplateTypes.TemplateTypesController.GetTemplateTypeItemsAsync">
+            <summary>
+            Gets all items.
+            </summary>
+        </member>
+        <member name="M:LayoutService.API.TemplateTypes.TemplateTypesController.GetTemplateTypeAsync(System.Guid)">
+            <summary>
+            Gets a specific item.
+            </summary>
+        </member>
+        <member name="M:LayoutService.API.TemplateTypes.TemplateTypesController.PutTemplateTypeAsync(System.Int64,LayoutTemplate.Domain.TemplateTypes.TemplateType)">
+            <summary>
+            Updates a specific item.
+            </summary>
+        </member>
+        <member name="M:LayoutService.API.TemplateTypes.TemplateTypesController.PostTemplateTypeAsync(LayoutTemplate.Domain.TemplateTypes.TemplateType)">
+            <summary>
+            Creates a specific item.
+            </summary>
+        </member>
+        <member name="M:LayoutService.API.TemplateTypes.TemplateTypesController.DeleteTemplateTypeAsync(System.Guid)">
+            <summary>
+            Deletes a specific item.
+            </summary>
+        </member>
+    </members>
+</doc>

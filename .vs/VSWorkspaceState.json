@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Backend_LayoutService",
-    "\\Backend_LayoutService\\LayoutService.API",
-    "\\Backend_LayoutService\\LayoutService.API\\Controllers"
+    "\\Backend_LayoutService\\LayoutService.API"
   ],
-  "SelectedNode": "\\Backend_LayoutService\\LayoutService.API\\Controllers\\TemplatesController.cs",
+  "SelectedNode": "\\Backend_LayoutService\\LayoutService.API\\FormRecognizer",
   "PreviewInSolutionExplorer": false
 }

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ng3dZtWW9USxt135rOcxH17NUX6yGog8Bmz5Xe4KRzcWF6APyh2t4Fjxk7fRbOIm5jvgPX4Qr9UbJLK51PBchw==",
+  "dgSpecHash": "fvcT+x97oq4uBcnUpTn3R28KXoKXkxfU+oqUs2ncNSNF3yrgz+6AJzfN8LWO3bLuwVms5sMPTEmXs4ENkJXHyA==",
   "success": true,
   "projectFilePath": "D:\\Projects\\TecAlliance\\experimental\\Labeling-Tools-Prototype\\Backend_LayoutService\\LayoutService.API\\LayoutService.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hmchung.TMA\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\hmchung.TMA\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\hmchung.TMA\\.nuget\\packages\\azure.ai.formrecognizer\\1.0.0-preview.2\\azure.ai.formrecognizer.1.0.0-preview.2.nupkg.sha512",
     "C:\\Users\\hmchung.TMA\\.nuget\\packages\\azure.core\\1.2.1\\azure.core.1.2.1.nupkg.sha512",
     "C:\\Users\\hmchung.TMA\\.nuget\\packages\\azure.storage.blobs\\12.4.2\\azure.storage.blobs.12.4.2.nupkg.sha512",
     "C:\\Users\\hmchung.TMA\\.nuget\\packages\\azure.storage.common\\12.4.1\\azure.storage.common.12.4.1.nupkg.sha512",

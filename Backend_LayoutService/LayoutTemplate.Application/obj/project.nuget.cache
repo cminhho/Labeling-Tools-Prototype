@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Aj2Ci35E4OGqrc5KqNJQD4n3A16hpXJk2T/xBAP4kftgZXshNMS8eBypJQ+eHLuCvTAwH/1PUymQCEHS8d2K1w==",
+  "dgSpecHash": "VgIA7ZMn2vtgQu6xGSdlC86RP5R4vPkAcPMDqkIKR3LB/Z1WuhDQ2NHTSFG/s635FNn7xadtRfuOUnWLMfTj6w==",
   "success": true,
   "projectFilePath": "D:\\Projects\\TecAlliance\\experimental\\Labeling-Tools-Prototype\\Backend_LayoutService\\LayoutTemplate.Application\\LayoutTemplate.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\hmchung.TMA\\.nuget\\packages\\azure.ai.formrecognizer\\1.0.0-preview.2\\azure.ai.formrecognizer.1.0.0-preview.2.nupkg.sha512",
     "C:\\Users\\hmchung.TMA\\.nuget\\packages\\azure.core\\1.2.1\\azure.core.1.2.1.nupkg.sha512",
     "C:\\Users\\hmchung.TMA\\.nuget\\packages\\azure.storage.blobs\\12.4.2\\azure.storage.blobs.12.4.2.nupkg.sha512",
     "C:\\Users\\hmchung.TMA\\.nuget\\packages\\azure.storage.common\\12.4.1\\azure.storage.common.12.4.1.nupkg.sha512",

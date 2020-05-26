@@ -3,24 +3,54 @@
 using LayoutService.Infrastructure.Database;
 using LayoutTemplate.Domain.Templates;
 using LayoutTemplate.Domain.TemplateTypes;
+using LayoutTemplate.Infrastructure.Domain.Templates;
+using LayoutTemplate.Infrastructure.Domain.TemplateTypes;
 
 namespace LayoutTemplate.Infrastructure.Domain
 {
-    public class UnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
-        private AppDbContext db;
-        public ITemplateRepository TemplateRepository;
-        public ITemplateTypeRepository TemplateTypeRepository;
-        public UnitOfWork(AppDbContext db, ITemplateRepository TemplateRepository, ITemplateTypeRepository TemplateTypeRepository)
+        private AppDbContext _dbContext;
+        private ITemplateRepository _templateRepository;
+        private ITemplateTypeRepository _templateTypeRepository;
+
+        public UnitOfWork(AppDbContext dbContext)
         {
-            this.db = db;
-            this.TemplateRepository = TemplateRepository;
-            this.TemplateTypeRepository = TemplateTypeRepository;
+            _dbContext = dbContext;
         }
 
-        public int SaveChanges()
+        public ITemplateRepository TemplateRepository
         {
-            return db.SaveChanges();
+            get
+            {
+                if (_templateRepository == null)
+                {
+                    _templateRepository = new TemplateRepository(_dbContext);
+                }
+                return _templateRepository;
+            }
+        }
+
+        public ITemplateTypeRepository TemplateTypeRepository
+        {
+            get
+            {
+                if (_templateTypeRepository == null)
+                {
+                    _templateTypeRepository = new TemplateTypeRepository(_dbContext);
+                }
+                return _templateTypeRepository;
+            }
+        }
+
+        public void Commit()
+        {
+            _dbContext.SaveChanges();
+        }
+
+        public void Roolback()
+        {
+            _dbContext.Dispose();
         }
     }
 }

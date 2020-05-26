@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace LayoutTemplate.Domain.Templates
 {
-    public interface ITemplateRepository : IRepository<Template>
+    public interface ITemplateRepository : IAsyncRepository<Template>
     {
-        Task<Template> CreateTemplateAsync(Template template);
-        Task<Template> UpdateTemplateAsync(Template template);
-        Task<IEnumerable<Template>> GetAllAsync();
-        Task<Template> GetTemplateByIdAsync(Guid templateId);
-        Task<Template> DeleteTemplateByIdAsync(Guid templateId);
     }
 }

@@ -57,9 +57,9 @@ namespace LayoutTemplate.Application.FormRecognizer
         // Get and display list of extracted keys for training data 
         // provided to train the model
         public async Task<KeysResult> GetListOfExtractedKeys(
-            IFormRecognizerClient formClient, Guid modelId)
+            IFormRecognizerClient formClient, Guid requestId)
         {
-            if (modelId == Guid.Empty)
+            if (requestId == Guid.Empty)
             {
                 _log.LogError("\nInvalid model Id.");
                 return null;
@@ -67,7 +67,7 @@ namespace LayoutTemplate.Application.FormRecognizer
 
             try
             {
-                KeysResult kr = await formClient.GetExtractedKeysAsync(modelId);
+                KeysResult kr = await formClient.GetExtractedKeysAsync(requestId);
                 var clusters = kr.Clusters;
                 foreach (var kvp in clusters)
                 {
@@ -77,7 +77,7 @@ namespace LayoutTemplate.Application.FormRecognizer
                         Console.WriteLine("\t" + v);
                     }
                 }
-                return await formClient.GetExtractedKeysAsync(modelId);
+                return await formClient.GetExtractedKeysAsync(requestId);
             }
             catch (ErrorResponseException e)
             {

@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Azure.AI.FormRecognizer/1.0.0-preview.2": {
+        "type": "package",
+        "dependencies": {
+          "Azure.Core": "1.2.1",
+          "System.Text.Json": "4.6.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.AI.FormRecognizer.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.AI.FormRecognizer.dll": {}
+        }
+      },
       "Azure.Core/1.2.1": {
         "type": "package",
         "dependencies": {
@@ -2106,6 +2119,22 @@
     }
   },
   "libraries": {
+    "Azure.AI.FormRecognizer/1.0.0-preview.2": {
+      "sha512": "Arcv0yxIqbSTC8lICERdOS0Uxobo40PXiCBHIPAVFNhuqEcw9SMRKY+MvlFnchmfAqQPb7sJT1IuXQPPXDBQmw==",
+      "type": "package",
+      "path": "azure.ai.formrecognizer/1.0.0-preview.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "README.md",
+        "azure.ai.formrecognizer.1.0.0-preview.2.nupkg.sha512",
+        "azure.ai.formrecognizer.nuspec",
+        "lib/netstandard2.0/Azure.AI.FormRecognizer.dll",
+        "lib/netstandard2.0/Azure.AI.FormRecognizer.xml",
+        "pkgicon.png"
+      ]
+    },
     "Azure.Core/1.2.1": {
       "sha512": "U0zPuK0/ssiz0gvli1/sslqPKANZpCa7muDM3K4Vj6Pf6YKYNnpByQsnqFQTYafzr6cQ41mr1nM07I8jOm5UkA==",
       "type": "package",
@@ -6892,6 +6921,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Azure.AI.FormRecognizer >= 1.0.0-preview.2",
       "Azure.Storage.Blobs >= 12.4.2",
       "LayoutTemplate.Domain >= 1.0.0",
       "LayoutTemplate.Infrastructure >= 1.0.0",
@@ -6923,8 +6953,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://tecalliance.pkgs.visualstudio.com/FleetManager/_packaging/NuGet_Packages/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -6947,6 +6976,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Azure.AI.FormRecognizer": {
+            "target": "Package",
+            "version": "[1.0.0-preview.2, )"
+          },
           "Azure.Storage.Blobs": {
             "target": "Package",
             "version": "[12.4.2, )"

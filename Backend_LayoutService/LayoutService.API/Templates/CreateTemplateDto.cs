@@ -3,17 +3,17 @@ using System.ComponentModel.DataAnnotations;
 
 namespace LayoutService.API.Templates
 {
-    public class TemplateDto
+    public class CreateTemplateDto
     { 
         [MinLength(1)]
         [MaxLength(150)]
         public string name { get; set; }
 
-        public TemplateDto()
+        public CreateTemplateDto()
         {
         }
 
-        public TemplateDto(string name)
+        public CreateTemplateDto(string name)
         {
             this.name = name;
         }

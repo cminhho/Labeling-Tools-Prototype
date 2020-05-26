@@ -56,7 +56,7 @@ namespace LayoutTemplate.Application.BlobStorage
             {
                 BlobServiceClient blobServiceClient = CreateBlobServiceClient();
                 BlobContainerClient blobContainerClient = blobServiceClient.GetBlobContainerClient(blobContainerName);
-
+                
                 string fileName = this.GenerateFileName(strFileName);
 
                 if (fileName != null && fileData != null)
@@ -132,6 +132,13 @@ namespace LayoutTemplate.Application.BlobStorage
             }
             return results;
         }
+        public async Task DeleteBlobAsync(string blobContainerName, string filePath)
+        {
+            BlobServiceClient blobServiceClient = CreateBlobServiceClient();
+            BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(blobContainerName);
+            BlobClient blobClient = containerClient.GetBlobClient(filePath);
+            await blobClient.DeleteAsync();
+        }
 
         private BlobServiceClient CreateBlobServiceClient()
         {
@@ -139,5 +146,6 @@ namespace LayoutTemplate.Application.BlobStorage
             BlobServiceClient blobServiceClient = new BlobServiceClient(Constants.azureConnectionString);
             return blobServiceClient;
         }
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using LayoutService.Domain.Templates;
 using LayoutTemplate.Infrastructure.Domain;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -8,35 +9,38 @@ namespace LayoutTemplate.Application.Templates
 {
     public class TemplateService : ITemplateService
     {
-        private UnitOfWork _context;
+        private readonly ILogger<TemplateService> _logger;
+        private IUnitOfWork _unitOfWork;
 
-        public TemplateService(UnitOfWork _context)
+        public TemplateService(ILogger<TemplateService> logger, IUnitOfWork unitOfWork)
         {
-            this._context = _context;
+            _logger = logger;
+            _unitOfWork = unitOfWork;
         }
         public async Task<Template> CreateTemplateAsync(Template template)
         {
-            return await _context.TemplateRepository.CreateTemplateAsync(template);
+            return await _unitOfWork.TemplateRepository.AddAsync(template);
         }
 
-        public async Task<Template> DeleteTemplateByIdAsync(Guid templateId)
+        public async Task DeleteTemplateAsync(Guid templateId)
         {
-            return await _context.TemplateRepository.DeleteTemplateByIdAsync(templateId);
+            var template = await _unitOfWork.TemplateRepository.GetByIdAsync(templateId);
+            await _unitOfWork.TemplateRepository.DeleteAsync(template);
         }
 
-        public async Task<IEnumerable<Template>> GetAllTemplatesAsync()
+        public async Task<IReadOnlyList<Template>> GetAllTemplatesAsync()
         {
-            return await _context.TemplateRepository.GetAllAsync();
+            return await _unitOfWork.TemplateRepository.ListAllAsync();
         }
 
         public async Task<Template> GetTemplateByIdAsync(Guid templateId)
         {
-            return await _context.TemplateRepository.GetTemplateByIdAsync(templateId);
+            return await _unitOfWork.TemplateRepository.GetByIdAsync(templateId);
         }
 
         public async Task<Template> UpdateTemplateAsync(Template templateChanges)
         {
-            return await _context.TemplateRepository.UpdateTemplateAsync(templateChanges);
+            return await _unitOfWork.TemplateRepository.UpdateAsync(templateChanges);
         }
     }
 }

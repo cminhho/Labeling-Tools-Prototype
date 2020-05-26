@@ -13,7 +13,7 @@ namespace LayoutTemplate.Application.TemplateTypes
 
         Task<IEnumerable<TemplateType>> GetAllTemplateTypesAsync();
         Task<TemplateType> GetTemplateTypeByIdAsync(Guid templateTypeId);
-        Task<TemplateType> DeleteTemplateTypeByIdAsync(Guid templateTypeId);
+        Task DeleteTemplateTypeAsync(Guid templateTypeId);
 
     }
 }

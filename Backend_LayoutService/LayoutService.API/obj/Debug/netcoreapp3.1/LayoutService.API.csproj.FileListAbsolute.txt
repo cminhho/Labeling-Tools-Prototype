@@ -657,3 +657,6 @@ D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutServ
 D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutService.API\obj\Debug\netcoreapp3.1\LayoutService.API.dll
 D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutService.API\obj\Debug\netcoreapp3.1\LayoutService.API.pdb
 D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutService.API\obj\Debug\netcoreapp3.1\LayoutService.API.genruntimeconfig.cache
+D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutService.API\bin\Debug\netcoreapp3.1\Azure.AI.FormRecognizer.dll
+D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutService.API\bin\Debug\netcoreapp3.1\LayoutService.API.xml
+D:\Projects\TecAlliance\experimental\Labeling-Tools-Prototype\Backend_LayoutService\LayoutService.API\obj\Debug\netcoreapp3.1\LayoutService.API.xml

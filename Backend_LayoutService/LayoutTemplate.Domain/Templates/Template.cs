@@ -9,6 +9,10 @@ namespace LayoutService.Domain.Templates
     public class Template : Entity, IAggregateRoot, IAuditedEntityBase
     {
 
+        /// <summary>
+        /// The name of the template
+        /// </summary>
+        /// <example>Template XXXXX</example>
         [StringLength(150)]
         [Column("name")]
         [Required]

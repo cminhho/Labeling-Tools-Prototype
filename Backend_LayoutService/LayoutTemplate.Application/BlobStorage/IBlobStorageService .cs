@@ -14,5 +14,7 @@ namespace LayoutTemplate.Application.BlobStorage
         Task<bool> UploadAsync(string blobContainerName, IFormFile file);
 
         Task<List<BlobItem>> GetBlobsAsync(string blobContainerName);
+
+        Task DeleteBlobAsync(string blobContainerName, string filePath);
     }
 }

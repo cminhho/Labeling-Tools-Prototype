@@ -1,0 +1,9 @@
+{
+	"test":{
+			"appUrl": "https://fleetmanager-chho.tecalliance.net/"
+		},
+		
+	"dev":{
+			"appUrl": "https://fleetmanager-chho.tecalliance.net/"
+		}
+}

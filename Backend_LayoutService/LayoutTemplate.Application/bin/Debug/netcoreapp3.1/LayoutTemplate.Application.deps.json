@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "LayoutTemplate.Application/1.0.0": {
         "dependencies": {
+          "Azure.AI.FormRecognizer": "1.0.0-preview.2",
           "Azure.Storage.Blobs": "12.4.2",
           "LayoutTemplate.Domain": "1.0.0",
           "LayoutTemplate.Infrastructure": "1.0.0",
@@ -15,6 +16,18 @@
         },
         "runtime": {
           "LayoutTemplate.Application.dll": {}
+        }
+      },
+      "Azure.AI.FormRecognizer/1.0.0-preview.2": {
+        "dependencies": {
+          "Azure.Core": "1.2.1",
+          "System.Text.Json": "4.7.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.AI.FormRecognizer.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.20.25601"
+          }
         }
       },
       "Azure.Core/1.2.1": {
@@ -1413,6 +1426,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Azure.AI.FormRecognizer/1.0.0-preview.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Arcv0yxIqbSTC8lICERdOS0Uxobo40PXiCBHIPAVFNhuqEcw9SMRKY+MvlFnchmfAqQPb7sJT1IuXQPPXDBQmw==",
+      "path": "azure.ai.formrecognizer/1.0.0-preview.2",
+      "hashPath": "azure.ai.formrecognizer.1.0.0-preview.2.nupkg.sha512"
     },
     "Azure.Core/1.2.1": {
       "type": "package",

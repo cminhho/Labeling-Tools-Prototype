@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LayoutTemplate.Infrastructure
+namespace LayoutTemplate.Application
 {
     class Program
     {
